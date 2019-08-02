@@ -16,11 +16,11 @@
             display: block;
         }
         .marja>input {
-            text-align:center; 
-            width: 50px; 
-            padding: 0; 
-            height: auto; 
-            line-height: 1; 
+            text-align:center;
+            width: 50px;
+            padding: 0;
+            height: auto;
+            line-height: 1;
             display: inline-block;
             font-weight: bold;
         }
@@ -58,13 +58,13 @@
                         <div class="form-row">
                             <div class="col">
                                 <input class="form-control" type="text" placeholder="Фильтр..." v-model="filter" @keyup.esc="filter = ''">
-                            </div>    
+                            </div>
                             <div class="col">
                                 <label for="" class="col-form-label">Общая наценка</label>
                                 <span class="newDefMarja">
                                     <input type="text" style="width: 50px;" v-model="newDefMarja" class="text-center" @focus="focusinput" inputmode="numeric" @input="onlypercentnewdefmarja($event)">
                                 </span>
-                                <button @click.prevent="saveNewDefMarja" :disabled="disabled">Сохр</button>
+                                <button @click.prevent="saveNewDefMarja" :disabled="disabled" class="btn btn-secondary btn-sm">Сохр</button>
                             </div>
                         </div>
                     </form>
@@ -195,7 +195,7 @@
                                 <button class="btn btn-light btn-block" type="button" data-dismiss="modal">Отмена</button>
                             </div>
                             <div class="col col-12 col-md-auto pl-0 pr-0 mb-3 order-1 order-md-12">
-                                <button class="btn btn-primary btn-block" type="button" @click="addEdit(currentProduct)" :disabled="disabled">@{{ currentProduct.id ? 'Сохранить' : 'Добавить' }}</button>    
+                                <button class="btn btn-primary btn-block" type="button" @click="addEdit(currentProduct)" :disabled="disabled">@{{ currentProduct.id ? 'Сохранить' : 'Добавить' }}</button>
                             </div>
                         </div>
                     </div>
